@@ -1,1 +1,49 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Responsive Youtube Video</title>
+	<link rel="stylesheet" href="">
+	<style>
+		.video_container {
+			 max-width: 800px;
+			 margin:auto;
+		}
+	</style>
+</head>
+<body>
+	<h2>Responsive Youtube Video Tutorial </h2>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus numquam vitae vero? Illum voluptatem blanditiis aliquam voluptas, expedita nemo est consequatur consectetur cum dolore temporibus, nisi fugit? Quasi, quidem, quisquam!
+	</p>
+	<div class="video_container">
+		<iframe  src="https://www.youtube.com/embed/gBHk2HFaD1Q" frameborder="0" allowfullscreen></iframe>
+	</div>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus numquam vitae vero? Illum voluptatem blanditiis aliquam voluptas, expedita nemo est consequatur consectetur cum dolore temporibus, nisi fugit? Quasi, quidem, quisquam!
+	</p>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus numquam vitae vero? Illum voluptatem blanditiis aliquam voluptas, expedita nemo est consequatur consectetur cum dolore temporibus, nisi fugit? Quasi, quidem, quisquam!
+	</p>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus numquam vitae vero? Illum voluptatem blanditiis aliquam voluptas, expedita nemo est consequatur consectetur cum dolore temporibus, nisi fugit? Quasi, quidem, quisquam!
+	</p>
+
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/G_67ufZ5p24" frameborder="0" allowfullscreen></iframe>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js"></script>
+	<script>
+		jQuery(document).ready(function($) { 
+			$(window).on('load resize scroll',function(e) { 
+				var video_widht = $('.video_container').width()-17;
+				var video_height = video_widht * (9/16);
+				$('.video_container iframe').css({'width':video_widht,'height':video_height}); 
+			});
+		}); 
+	</script>
+
+</body>
+</html>
